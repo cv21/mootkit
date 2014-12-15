@@ -1,0 +1,9 @@
+{
+    "port" : 1337,
+    "mongoose": {
+        "uri": "mongodb://localhost/forssel"
+    },
+    "jwt": {
+    	"secret": "SAWLK23lm123lkj123lwl123123lewrz21gmakw21pxksmzgn1caefreq"
+    }
+}

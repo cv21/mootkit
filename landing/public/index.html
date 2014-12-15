@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en_US" ng-app="app">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name='yandex-verification' content='4d73ab7d8d59518a' />
+		<title>MootKit - Realtime Collaboration Platform</title>	
+		<link rel="icon" type="image/png" href="/img/logo.png" />
+		<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/flat-ui.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/loading-bar.css">
+		<a href="https://plus.google.com/114344950409828007023" rel="publisher"></a>
+		<meta name="keywords" content="platform,collaboration,web,beta,work,tickets,discuss,prototype,themes,project,good,design,solution,pretty,awesome,moot,white,manual,service,web,realtime,startup,site,link">
+		<meta name="description" content="Fantastically convenient platform for realtime collaboration over the web projects. Create project. Add users to your project. Tie the platform with a prototype or a finished site. Create tickets and discuss relevant aspects of the project right on the prototype. Sort the tickets by themes. Assign members. Keep all decisions on your project. This allows you to easily manage the technical and design solutions. Work with community. Consider the desire of users. Correct errors found community.">
+	</head>
+	<body>
+		<div class="container-fluid top-stripe"></div>
+		<ui-view/>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		 (function (d, w, c) {
+		     (w[c] = w[c] || []).push(function() {
+		         try {
+		             w.yaCounter24937610 = new Ya.Metrika({id:24937610,
+		                     webvisor:true,
+		                     clickmap:true,
+		                     trackLinks:true,
+		                     accurateTrackBounce:true});
+		         } catch(e) { }
+		     });
+
+		     var n = d.getElementsByTagName("script")[0],
+		         s = d.createElement("script"),
+		         f = function () { n.parentNode.insertBefore(s, n); };
+		     s.type = "text/javascript";
+		     s.async = true;
+		     s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+		     if (w.opera == "[object Opera]") {
+		         d.addEventListener("DOMContentLoaded", f, false);
+		     } else { f(); }
+		 })(document, window, "yandex_metrika_callbacks");
+		</script>
+		<noscript><div><img src="//mc.yandex.ru/watch/24937610" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
+
+		<!-- Поместите этот тег за последним тегом виджета виджет. -->
+		<script type="text/javascript">
+		   window.___gcfg = {lang: 'ru'};
+
+		   (function() {
+		     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		     po.src = 'https://apis.google.com/js/platform.js';
+		     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		   })();
+		</script>
+
+		<script type="text/javascript" src="/lib/angular.min.js"></script>
+		<script type="text/javascript" src="/lib/angular-ui-router.min.js"></script>
+		<script type="text/javascript" src="/lib/angular-cookie.min.js"></script>
+	    <script type="text/javascript" src="/lib/loading-bar.min.js"></script>
+	    <script type="text/javascript" src="/lib/angular-translate.min.js"></script>
+	    <script type="text/javascript" src="/lib/angular-translate-storage-cookie.min.js"></script>
+	    <script type="text/javascript" src="/lib/angular-translate-loader-static-files.js"></script>
+	    <script type="text/javascript" src="/lib/cookies.js"></script>
+
+		<script type="text/javascript" src="/app/app.js"></script>
+		<script type="text/javascript" src="/app/services/auth.js"></script>
+		<script type="text/javascript" src="/app/controllers/home.js"></script>
+		<script type="text/javascript" src="/app/controllers/signin.js"></script>
+		<script type="text/javascript" src="/app/controllers/topPanel.js"></script>
+
+	</body>
+</html>

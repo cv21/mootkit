@@ -1,0 +1,4 @@
+mootkit
+=======
+
+Realtime collaboration platform

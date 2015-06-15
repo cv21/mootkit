@@ -79,9 +79,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     });
 
 app.constant('config', {
-    apiUrl: '//api.mootkit.lc',
-    socketUrl: 'api.mootkit.lc',
-    domain: 'mootkit.lc'
+    apiUrl: '//api.mootkit.me',
+    socketUrl: 'api.mootkit.me',
+    domain: 'mootkit.me'
 });
 
 app.run(['$rootScope', 'cfpLoadingBar', 'auth',

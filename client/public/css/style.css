@@ -258,3 +258,84 @@ a:hover {
 .lead-thin {
 	font-weight: 300;
 }
+
+.font-thin {
+    font-weight: 300;
+}
+
+.font-small {
+    font-size: 14px;
+}
+
+.project-card {
+    background-color: #ECF0F1;
+    text-align: center;
+}
+
+.lead-pure {
+    margin-bottom: 0px !important;
+}
+
+.semi-fade {
+    color: #7f8c8d;
+}
+
+.nav-pills > li.active > a {
+    background-color: #ECF0F1 !important;
+    color: #000;
+}
+
+.nav-pills > li.active > a:hover {
+    color: #000;
+}
+
+.ticket {
+    background-color: #ECF0F1;
+}
+
+.ticket > .author {
+    color: #7f8c8d;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: 300;
+}
+
+.ticket > .comment {
+}
+
+.ticket small {
+
+}
+
+.ticket > .comment > .time {
+    color: #7f8c8d;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: right;
+}
+
+.ticket > .comment > .avatar {
+    width: 48px;
+    height: 48px;
+}
+
+.ticket > .comment > .text-my {
+    background-color: #fff;
+    margin-left: 48px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.ticket > .comment > .text-member {
+    background-color: #fff;
+    margin-right: 48px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.project-menu {
+    padding-right: 45px;
+    border-right: #ECF0F1 3px solid;
+}

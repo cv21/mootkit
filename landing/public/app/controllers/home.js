@@ -5,7 +5,7 @@ angular.module('app').controller('home', function($scope, $http, config, ipCooki
 	};
 
     $scope.join = function() {
-   		$http.post(config.apiUrl + '/login', $scope.userCredentials)
+   		$http.post(config.apiUrl + '/join', $scope.userCredentials)
    			.then(function(resp) {
    				ipCookie('jwt', resp.data.jwt, {
    					'domain': '.' + config.domain
@@ -15,9 +15,4 @@ angular.module('app').controller('home', function($scope, $http, config, ipCooki
    				console.log('err', resp);
    			});
     }
-
-	$scope.email = null;
-	$scope.emailSended = false;
-	$scope.emailExist = false;	
-	$scope.readyToTry = false;
 });

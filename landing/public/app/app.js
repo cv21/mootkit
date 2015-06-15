@@ -16,7 +16,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
     });
 
     var lang = window.navigator.userLanguage || window.navigator.language || "en";
-    console.log(lang);
+
     $translateProvider.preferredLanguage(lang);
 
     $translateProvider.useCookieStorage();
@@ -29,7 +29,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
         .state('cmn.panel', {
             views: {
                 'top-panel': {
-                    templateUrl: '/app/views/top-panel.html',
+                    templateUrl: '/app/views/top-panel.html'
                 },
                 '': {
                     template: '<ui-view/>'
@@ -44,10 +44,15 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
           templateUrl: '/app/views/home.html',
           controller: 'home'
         })
-        .state('cmn.panel.signin', {
-          url: '/signin',
-          templateUrl: '/app/views/signin.html',
-          controller: 'signin'
+        .state('cmn.panel.login', {
+          url: '/login',
+          templateUrl: '/app/views/login.html',
+          controller: 'login'
+        })
+        .state('cmn.panel.join', {
+          url: '/join',
+          templateUrl: '/app/views/join.html',
+          controller: 'join'
         })
         .state('cmn.panel.about', {
           url: '/about',
@@ -56,9 +61,9 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
     });
 
 app.constant('config', {
-    apiUrl: '//api.mootkit.lc',
-    appUrl: 'http://app.mootkit.lc',
-    domain: 'mootkit.lc'
+    apiUrl: '//api.mootkit.me',
+    appUrl: 'http://app.mootkit.me',
+    domain: 'mootkit.me'
 });
 
 app.run(['$rootScope', 'cfpLoadingBar', 'auth',

@@ -1,12 +1,12 @@
-angular.module('app').controller('signin', function($scope, $http, ipCookie, config) {
+angular.module('app').controller('join', function($scope, $http, ipCookie, config) {
 
 	$scope.userCredentials = {
 		email: null,
 		password: null
-	}
+	};
 
-	$scope.signin = function() {
-		$http.post(config.apiUrl + '/signin', $scope.userCredentials)
+	$scope.join = function() {
+		$http.post(config.apiUrl + '/join', $scope.userCredentials)
 			.then(function(resp) {				
 				ipCookie('jwt', resp.data.jwt, {
 					'domain': '.' + config.domain
@@ -15,6 +15,5 @@ angular.module('app').controller('signin', function($scope, $http, ipCookie, con
 			}, function(resp) {
 				console.log('err', resp);
 			});
-
 	}	
 });

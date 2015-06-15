@@ -42,7 +42,7 @@ app.use(expressio.bodyParser()); // стандартный модуль, для 
 app.use(expressio.methodOverride()); // поддержка put и delete
 app.use(app.router); // модуль для простого задания обработчиков путей
 
-app.post('/signup', function(req, res) {
+app.post('/join', function(req, res) {
 	if(!req.body.email || !req.body.password) {
 		return res.send({error: {type: 'NoDataError'}});
 	}
@@ -103,7 +103,7 @@ app.post('/signup/beta', function(req, res) {
 });
 
 
-app.post('/signin', function(req, res) {
+app.post('/login', function(req, res) {
 	if(!req.body.email || !req.body.password) {
 		return res.send(400, {error: {type: 'NoDataError'}});
 	}

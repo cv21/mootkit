@@ -2,20 +2,18 @@
 		<div class="container">
 			<div class="col-md-4 col-sm-6 col-xs-12">
                 <p class="lead">{{ "Fantastically convenient platform for" | translate }} {{ "collaboration over the web projects" | translate }} <strong>{{ "realtime" | translate }}</strong>.</p>
-               	<form class="login-form text-center" ng-submit="signupForBeta()">               		
-                    <div ng-show="!emailSended && readyToTry" class="form-group">
-                        <input autofocus ng-model="email" type="email" class="form-control login-field" value="" placeholder="{{ 'Enter your email' | translate}}" id="login-name">
-                        <label class="login-field-icon fui-mail" for="login-name"></label>
-                    </div>
-                    <button ng-if="!emailSended" type="submit" class="btn btn-block btn-lg btn-info">
-                        <span ng-if="!readyToTry">{{ "Try it" | translate }}</span>
-                        <span ng-if="readyToTry">{{ "Register" | translate }}</span>
-                    </button>
-                    <div class="text-center">
-                    	<span ng-if="emailSended">{{ "Thanks" | translate }}, <b>{{email}}</b>! <br>{{ "Soon you will receive an email notification" | translate }}.</span>
-                    	<small ng-if="emailExist">{{ "This email is already registered" | translate }}</small>
-                    </div>
-                </form>
+				<form class="login-form" ng-submit="join()">
+					<div class="form-group">
+						<input ng-model="userCredentials.email" type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
+						<label class="login-field-icon fui-mail" for="login-name"></label>
+					</div>
+					<div class="form-group">
+						<input ng-model="userCredentials.password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
+						<label class="login-field-icon fui-lock" for="login-pass"></label>
+					</div>
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Join</button>
+					<a class="login-link" href="/login">Log in</a>
+				</form>
 			</div>
 			<div class="col-md-8 col-sm-6 hidden-xs home-img">
 				<img src="/img/MootkitHome.jpg">

@@ -1,4 +1,8 @@
-angular.module('app').controller('home', function($scope, $http, config, ipCookie) {
+angular.module('app').controller('home', function($scope, $http, config, ipCookie, auth, $location) {
+    if(auth.signedIn()) {
+        $location.url('/projects');
+    }
+
 	$scope.userCredentials = {
 		email: null,
 		password: null
@@ -8,7 +12,7 @@ angular.module('app').controller('home', function($scope, $http, config, ipCooki
    		$http.post(config.apiUrl + '/join', $scope.userCredentials)
    			.then(function(resp) {
    				ipCookie('jwt', resp.data.jwt, {
-   					'domain': '.' + config.domain
+   					'domain': '.' + config.host
    				});
    				window.location.href = config.appUrl;
    			}, function(resp) {

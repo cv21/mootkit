@@ -85,12 +85,41 @@
 	padding: 15px;
 }
 
+.pd-sm {
+    padding: 10px;
+}
+
+.pd-vrt {
+    padding: 15px 0 15px 0;
+}
+
+.pd-vrt-sm {
+    padding: 5px 0 5px 0;
+}
+
+.pd-no {
+    padding: 0px;
+}
+
+
 .mg-hrz {
 	margin: 0 15px 0 15px;
 }
 
 .mg {
 	margin: 15px;
+}
+
+.mg-vrt {
+    margin: 15px 0 15px 0;
+}
+
+.mg-top {
+    margin-top: 15px;
+}
+
+.mg-no {
+    margin: 0px;
 }
 
 .footer-primary-bg {

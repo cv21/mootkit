@@ -30,7 +30,8 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
         .state('cmn.panel', {
             views: {
                 'top-panel': {
-                    templateUrl: '/app/views/top-panel.html'
+                    templateUrl: '/app/views/top-panel.html',
+                    controller: 'topPanel'
                 },
                 '': {
                     template: '<ui-view/>'
@@ -98,9 +99,7 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
 
 app.constant('config', {
     apiUrl: '//api.mootkit.lc',
-    appUrl: 'app.mootkit.lc',
-    socketUrl: '//api.mootkit.lc',
-    domain: 'mootkit.lc'
+    host: 'mootkit.lc'
 });
 
 app.run(['$rootScope', 'cfpLoadingBar', 'auth',

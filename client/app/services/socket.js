@@ -3,7 +3,7 @@ angular.module('app').factory('socket', function(ipCookie, config, socketFactory
     var jwt = ipCookie('jwt');
 
     if(jwt !== undefined) {
-        var socketIo = io.connect(config.socketUrl, {
+        var socketIo = io.connect(config.apiUrl, {
             'query': 'token=' +  jwt,
             'transports': [
                 'websocket',
@@ -11,7 +11,7 @@ angular.module('app').factory('socket', function(ipCookie, config, socketFactory
             ]
         });
     } else {
-        var socketIo = io.connect(config.socketUrl);
+        var socketIo = io.connect(config.apiUrl);
     }
 
     socketIoFactory = socketFactory({

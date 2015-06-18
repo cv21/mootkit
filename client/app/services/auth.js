@@ -14,30 +14,23 @@ angular.module('app').factory('auth', ['$http', 'config', 'socket', 'logger', 'i
         setToken: function(token) {
             if(angular.isDefined(token) && angular.isString(token)) {
                 ipCookie('jwt', token, {
-                    domain: '.' + config.domain
+                    domain: '.' + config.host
                 });
                 factoryUnit.token = token;
             }
         },
 
         signIn: function() {
-            socket.emit('jwt:auth', {token: factoryUnit.token});
-
             socket.on('jwt:auth:success', function (res) {
                 factoryUnit.user = res;
-                if($location.host() == config.appUrl) {
+                if($location.url() == '/') {
                     $location.path('/projects');
-                } else {
-                    console.log('redirect to ' + 'http://' + config.appUrl + '/projects');
-                    window.location.href = 'http://' + config.appUrl + '/projects';
-                    //$location.url('http://' + config.appUrl + '/projects');
                 }
-                console.log('authenticated!!!!', res);
             });
 
-            socket.on('jwt:auth:error', function (res) {
-                console.log('authenticated fail', res);
-            });
+            socket.on('jwt:auth:error', function (res) {});
+
+            socket.emit('jwt:auth', {token: factoryUnit.token});
         },
 
         makeToken: function(userCredentials) {

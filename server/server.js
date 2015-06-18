@@ -159,7 +159,7 @@ app.io.route('jwt', {
     auth: function(req) {
 	  	jwt.verify(req.data.token, config.get('jwt:secret'), function(err, decoded) {
 	  		if (err) {
-	  			socket.emit('jwt:auth:fail');
+	  			req.io.emit('jwt:auth:fail');
           		return;
         	}
 		    req.io.decoded_token = decoded;		    

@@ -1,5 +1,4 @@
-angular.module('app').controller('join', function($scope, $http, ipCookie, config) {
-
+angular.module('app').controller('join', function($scope, $http, ipCookie, config, $location) {
 	$scope.userCredentials = {
 		email: null,
 		password: null
@@ -9,9 +8,9 @@ angular.module('app').controller('join', function($scope, $http, ipCookie, confi
 		$http.post(config.apiUrl + '/join', $scope.userCredentials)
 			.then(function(resp) {				
 				ipCookie('jwt', resp.data.jwt, {
-					'domain': '.' + config.domain
+					'domain': '.' + config.host
 				});
-				window.location.href = config.appUrl;
+                $location.url('/projects');
 			}, function(resp) {
 				console.log('err', resp);
 			});

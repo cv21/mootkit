@@ -1,3 +1,33 @@
+<!--<div class="container-fluid top-stripe"></div>-->
+<!--<div class="container-fluid top-panel">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-6 col-xs-6">-->
+                <!--<div class="text-left top-panel-logo">-->
+                    <!--<a href="/">-->
+                        <!--<h4>-->
+                            <!--<img width="30px" height="30px" src="/img/logo.png">-->
+                            <!--MootKit-->
+                        <!--</h4>-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-6 col-xs-6">-->
+                <!--<ul class="nav navbar-nav navbar-right tp-ui-block">-->
+                    <!--<li ng-if="!signedIn" class="top-panel-signin">-->
+                        <!--<a href="/login">-->
+                            <!--<span class="fui-lock icon-text"></span>{{ "Log In" | translate}}-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li ng-if="signedIn" class="top-panel-nickname">-->
+                        <!--<a href="/">{{user.email}} <span class="fui-gear"></span></a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
 <div class="container-fluid top-panel">
 	<div class="container">
 		<div class="row">
@@ -11,15 +41,18 @@
 					</a>
 				</div>
 			</div>
-			<div class="col-md-6 col-xs-6">
-				<ul class="nav navbar-right tp-ui-block text-right">
-	        		<li class="top-panel-signin">
-	        			<a href="/login">
-	        				<span class="fui-lock icon-text"></span>{{ "Log In" | translate}}
-	        			</a>
-	        		</li>
-	    		</ul>
-			</div>
+            <div class="col-md-6 col-xs-6">
+                <ul class="nav navbar-nav navbar-right tp-ui-block">
+                    <li ng-if="!signedIn" class="top-panel-signin">
+                        <a href="/login">
+                            <span class="fui-lock icon-text"></span>{{ "Log In" | translate}}
+                        </a>
+                    </li>
+                    <li ng-if="signedIn" class="top-panel-nickname">
+                        <a href="/">{{user.email}} <span class="fui-gear"></span></a>
+                    </li>
+                </ul>
+            </div>
 		</div>
 	</div>
 </div>

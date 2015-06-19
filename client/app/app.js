@@ -60,11 +60,11 @@ app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $tran
           url: '/about',
           templateUrl: '/app/views/about.html'
         })
-        .state('cmn.panel.projects', {
-            url: '/projects',
-            templateUrl: '/app/views/projects.html',
-            controller: 'projects'
-        })
+        //.state('cmn.panel.projects', {
+        //    url: '/projects',
+        //    templateUrl: '/app/views/projects.html',
+        //    controller: 'projects'
+        //})
         .state('cmn.panel.projectsCreate', {
             url: '/projects/create',
             templateUrl: '/app/views/projectsCreate.html',

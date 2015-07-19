@@ -26,3 +26,6 @@ server/node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# IDE project files
+.idea/

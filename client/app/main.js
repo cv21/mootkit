@@ -1,8 +1,16 @@
 /*
- * Configure require.js for project structure
+    TODO:
+    Вернуть baseURL
+    Сделать шумку
+    Сделать живой фронт
  */
+
 require.config({
-    baseUrl: '/app'
+    shim: {
+        angular: {
+            exports: '/lib/angular.min.js'
+        }
+    }
 });
 
 /*
@@ -11,22 +19,39 @@ require.config({
  */
 require([
     /*
+     * Load Angular core
+     */
+    '/lib/angular.min.js',
+
+    /*
+     * Load libraries
+     */
+    '/lib/angular-ui-router.min.js',
+    '/lib/angular-cookie.min.js',
+    '/lib/loading-bar.min.js',
+    '//api.mootkit.lc/socket.io/socket.io.js',
+    '/lib/angular-translate.min.js',
+    '/lib/angular-translate-storage-cookie.min.js',
+    '/lib/angular-translate-loader-static-files.js',
+    '/lib/socket.min.js',
+    '/lib/cookies.js',
+
+    /*
      * Load App as main part of Angular App
      */
-    'app',
+    '/app/app.js',
 
     /*
      * Load services
      */
-    'services/loader',
-    'services/auth',
-    'services/socket',
-    'services/logger',
+    '/app/services/loader.js',
+    '/app/services/auth.js',
+    '/app/services/socket.js',
+    '/app/services/logger.js',
 
     /*
      * Load modules
      */
-    'modules/auth/auth',
-    'modules/project/project',
-
-])
+    '/app/modules/auth/auth.js',
+    '/app/modules/project/project.js'
+]);

@@ -1,22 +1,24 @@
-angular.module('app').factory('socket', function(ipCookie, config, socketFactory) {
+require(['angular'], function() {
+    angular.module('app').factory('socket', function(ipCookie, config, socketFactory) {
 
-    var jwt = ipCookie('jwt');
+        var jwt = ipCookie('jwt');
 
-    if(jwt !== undefined) {
-        var socketIo = io.connect(config.apiUrl, {
-            'query': 'token=' +  jwt,
-            'transports': [
-                'websocket',
-                'xhr-polling'
-            ]
+        if(jwt !== undefined) {
+            var socketIo = io.connect(config.apiUrl, {
+                'query': 'token=' +  jwt,
+                'transports': [
+                    'websocket',
+                    'xhr-polling'
+                ]
+            });
+        } else {
+            var socketIo = io.connect(config.apiUrl);
+        }
+
+        socketIoFactory = socketFactory({
+            ioSocket: socketIo
         });
-    } else {
-        var socketIo = io.connect(config.apiUrl);
-    }
 
-    socketIoFactory = socketFactory({
-        ioSocket: socketIo
+        return socketIoFactory;
     });
-
-    return socketIoFactory;
-});
+})

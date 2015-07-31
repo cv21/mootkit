@@ -68,6 +68,7 @@ require([
     /*
      * Load modules
      */
-    'modules/auth/auth',
-    'modules/project/project'
+    'modules/profile/profile',
+    'modules/project/project',
+    'modules/misc/misc'
 ]);

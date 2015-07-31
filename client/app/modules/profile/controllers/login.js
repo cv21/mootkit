@@ -1,4 +1,4 @@
-angular.module('app').controller('login', function($scope, $http, ipCookie, config, $location, auth) {
+angular.module('profile').controller('profile.login', function($scope, $http, ipCookie, config, $location, auth) {
 
 	$scope.userCredentials = {
 		email: null,

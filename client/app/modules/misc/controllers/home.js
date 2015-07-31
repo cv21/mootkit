@@ -1,6 +1,4 @@
-//TODO: Доделать структуру модулей
-
-angular.module('app').controller('home', function($scope, $http, config, ipCookie, auth, $location) {
+angular.module('app').controller('misc.home', function($scope, $http, config, ipCookie, auth, $location) {
     if(auth.signedIn()) {
         $location.url('/projects');
     }

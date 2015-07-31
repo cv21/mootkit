@@ -1,4 +1,4 @@
-angular.module('app').controller('topPanel', function($scope, $http, config, auth) {
+angular.module('app').controller('misc.topPanel', function($scope, $http, config, auth) {
 
 	$scope.signedIn = false;
 	$scope.user = null;

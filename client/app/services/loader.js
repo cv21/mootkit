@@ -3,8 +3,7 @@
  */
 require(['angular'], function() {
     angular.module('app').service('loader', function(config) {
-        this.load = function(route, action, module) {
-
+        this.load = function(route, module, action) {
             route.templateUrl = '/modules/' + module + '/views/' + action + '.html';
             route.controller = module + '.' + action;
             route.resolve = {

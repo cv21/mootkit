@@ -1,4 +1,4 @@
-angular.module('app').controller('join', function($scope, $http, ipCookie, config, $location) {
+angular.module('profile').controller('profile.join', function($scope, $http, ipCookie, config, $location) {
 	$scope.userCredentials = {
 		email: null,
 		password: null

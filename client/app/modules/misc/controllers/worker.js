@@ -1,4 +1,4 @@
-angular.module('app').controller('worker', function($scope, socket) {
+angular.module('app').controller('misc.worker', function($scope, socket) {
 
 	$scope.connected = false;
 

@@ -1,4 +1,4 @@
-angular.module('app').controller('project.settings', function($scope, $stateParams, config, socket) {
+angular.module('project').controller('project.settings', function($scope, $stateParams, config, socket) {
 
     $scope.updateProject = function() {
         socket.emit('project:update', {

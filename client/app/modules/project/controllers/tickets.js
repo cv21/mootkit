@@ -1,4 +1,4 @@
-angular.module('app').controller('project.tickets', function($scope, $stateParams, config, socket, auth) {
+angular.module('project').controller('project.tickets', function($scope, $stateParams, config, socket, auth) {
 
     $scope.ticket = {
         project: null,

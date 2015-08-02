@@ -12,7 +12,8 @@ require.config({
         'angular-cookie': '../lib/angular-cookie.min',
         'angular-translate': '../lib/angular-translate.min',
         'angular-translate-storage-cookie': '../lib/angular-translate-storage-cookie.min',
-        'angular-translate-loader-static-files': '../lib/angular-translate-loader-static-files'
+        'angular-translate-loader-static-files': '../lib/angular-translate-loader-static-files',
+        'loading-bar': '../lib/loading-bar.min'
     },
 
     /*
@@ -25,8 +26,9 @@ require.config({
         'angular-ui-router': { deps: ['angular'] },
         'angular-cookie': { deps: ['angular'] },
         'angular-translate': { deps: ['angular'] },
-        'angular-translate-storage-cookie': { deps: ['angular'] },
-        'angular-translate-loader-static-files': { deps: ['angular'] }
+        'angular-translate-storage-cookie': { deps: ['angular', 'angular-translate'] },
+        'angular-translate-loader-static-files': { deps: ['angular', 'angular-translate'] },
+        'loading-bar': { deps: ['angular'] }
     }
 });
 
@@ -51,6 +53,7 @@ require([
     'angular-translate',
     'angular-translate-storage-cookie',
     'angular-translate-loader-static-files',
+    'loading-bar',
 
     /*
      * Load App as main part of Angular App

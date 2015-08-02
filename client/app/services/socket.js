@@ -1,5 +1,5 @@
-require(['angular'], function() {
-    angular.module('app').factory('socket', function(ipCookie, config, socketFactory) {
+require(['app'], function(app) {
+    app.factory('socket', function(ipCookie, config, socketFactory) {
 
         var jwt = ipCookie('jwt');
 

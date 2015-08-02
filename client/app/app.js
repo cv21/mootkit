@@ -1,4 +1,4 @@
-require(['angular', 'angular-ui-router', 'angular-cookie', 'angular-translate', ''], function() {
+define('app', ['angular', 'angular-ui-router', 'angular-cookie', 'angular-translate', 'loading-bar'], function(angular) {
     var app = angular.module('app', [
         'ui.router',
         'chieffancypants.loadingBar',
@@ -38,7 +38,7 @@ require(['angular', 'angular-ui-router', 'angular-cookie', 'angular-translate', 
         $stateProvider
             .state('cmn', {
                 abstract: true,
-                templateUrl: "/app/templates/cmn.html"
+                templateUrl: '/app/templates/cmn.html'
             })
             .state('cmn.panel', {
                 views: {
@@ -80,4 +80,5 @@ require(['angular', 'angular-ui-router', 'angular-cookie', 'angular-translate', 
              */
             auth.init();
         }]);
-})
+    return app;
+});

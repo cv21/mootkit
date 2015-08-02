@@ -1,5 +1,5 @@
-require(['angular'], function() {
-    angular.module('app').factory('logger', function() {
+require(['app'], function(app) {
+    app.factory('logger', function() {
         return {
             info: function() {
                 console.info(arguments);

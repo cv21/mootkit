@@ -1,4 +1,4 @@
-angular.module('app').controller('project.create', function($scope, $location, config, socket) {
+angular.module('project').controller('project.create', function($scope, $location, config, socket) {
     $scope.project = {
         title: null,
         url: null,

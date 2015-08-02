@@ -1,5 +1,5 @@
-require(['angular'], function() {
-    angular.module('app').factory('auth', ['$http', 'config', 'socket', 'logger', 'ipCookie', '$location', '$timeout', function($http, config, socket, logger, ipCookie, $location, $timeout) {
+require(['app'], function(app) {
+    app.factory('auth', ['$http', 'config', 'socket', 'logger', 'ipCookie', '$location', '$timeout', function($http, config, socket, logger, ipCookie, $location, $timeout) {
         var factoryUnit = {
             token: null,
             user: null,

@@ -1,4 +1,4 @@
-angular.module('app').controller('project.list', function ($scope, config, socket) {
+angular.module('project').controller('project.list', function ($scope, config, socket) {
     $scope.projects = null;
 
     socket.on('project:query:success', function (data) {

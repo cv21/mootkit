@@ -1,4 +1,4 @@
-require(['app'], function(app) {
+define('services/logger', ['app'], function(app) {
     app.factory('logger', function() {
         return {
             info: function() {

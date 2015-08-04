@@ -1,9 +1,11 @@
 /*
  * The Loader loads all neccessary files for any module
  */
-require(['app'], function(app) {
-    app.service('loader', function(config) {
+define('services/loader', ['app'], function(app) {    //Must be a provider since it will be injected into module.config()
+    var loader = app.provider('loader', function(config) {
+        this.$get = function(){ return this };
         this.load = function(route, module, action) {
+            console.log(route, module, action);
             route.templateUrl = '/modules/' + module + '/views/' + action + '.html';
             route.controller = module + '.' + action;
             route.resolve = {
@@ -17,6 +19,6 @@ require(['app'], function(app) {
                 }
             }
         }
-        return this;
     });
+    return loader;
 });

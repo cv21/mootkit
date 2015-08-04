@@ -1,4 +1,4 @@
-require(['app'], function(app) {
+define('services/auth', ['app'], function(app) {
     app.factory('auth', ['$http', 'config', 'socket', 'logger', 'ipCookie', '$location', '$timeout', function($http, config, socket, logger, ipCookie, $location, $timeout) {
         var factoryUnit = {
             token: null,

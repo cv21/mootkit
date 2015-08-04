@@ -1,4 +1,4 @@
-define('app', ['angular', 'angular-ui-router', 'angular-cookie', 'angular-translate', 'loading-bar'], function(angular) {
+define('app', ['angular', 'angular-ui-router', 'angular-cookie', 'cookies', 'angular-translate', 'loading-bar', 'socket'], function(angular) {
     var app = angular.module('app', [
         'ui.router',
         'chieffancypants.loadingBar',
@@ -6,10 +6,9 @@ define('app', ['angular', 'angular-ui-router', 'angular-cookie', 'angular-transl
         'pascalprecht.translate',
         'ngCookies',
         'btford.socket-io',
-        'loader'
     ]);
 
-    app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider, loader) {
+    app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $translateProvider) {
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/");
 
@@ -42,7 +41,9 @@ define('app', ['angular', 'angular-ui-router', 'angular-cookie', 'angular-transl
             })
             .state('cmn.panel', {
                 views: {
-                    'top-panel': loader.load({}, 'misc', 'topPanel'),
+                    'top-panel': {
+                        templateUrl: '/app/modules/misc/views/topPanel.html'
+                    },
                     '': {
                         template: '<ui-view/>'
                     },

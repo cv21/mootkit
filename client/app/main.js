@@ -8,6 +8,7 @@ require.config({
         'angular': '../lib/angular.min',
         'cookies': '../lib/cookies',
         'socket': '../lib/socket.min',
+        'socket.io': '//api.mootkit.lc/socket.io/socket.io.js',
         'angular-ui-router': '../lib/angular-ui-router.min',
         'angular-cookie': '../lib/angular-cookie.min',
         'angular-translate': '../lib/angular-translate.min',
@@ -48,7 +49,6 @@ require([
     'cookies',
     'socket',
     'angular-ui-router',
-    '//api.mootkit.lc/socket.io/socket.io.js',
     'angular-cookie',
     'angular-translate',
     'angular-translate-storage-cookie',
@@ -71,7 +71,10 @@ require([
     /*
      * Load modules
      */
+    'modules/misc/misc',
     'modules/profile/profile',
-    'modules/project/project',
-    'modules/misc/misc'
-]);
+    'modules/project/project'
+
+], function() {
+    angular.bootstrap(document, ['app'])
+});

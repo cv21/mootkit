@@ -26,10 +26,11 @@ app.use(function(req, res, next) {
     }
 });
 
-app.io.set('authorization', socketioJwt.authorize({
-  secret: config.get('jwt:secret'),
-  handshake: true
-}));
+// TODO uncomment for authorization by token
+//app.io.set('authorization', socketioJwt.authorize({
+//  secret: config.get('jwt:secret'),
+//  handshake: true
+//}));
 
 app.io.set('transports', [
     'websocket', 

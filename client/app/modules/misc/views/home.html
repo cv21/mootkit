@@ -1,105 +1,105 @@
-	<div class="container-fluid home-top-bg">
-		<div class="container">
-			<div class="col-md-4 col-sm-6 col-xs-12">
-                <p class="lead">{{ "Fantastically convenient platform for" | translate }} {{ "collaboration over the web projects" | translate }} <strong>{{ "realtime" | translate }}</strong>.</p>
-				<form class="login-form" ng-submit="join()">
-					<div class="form-group">
-						<input ng-model="userCredentials.email" type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
-						<label class="login-field-icon fui-mail" for="login-name"></label>
-					</div>
-					<div class="form-group">
-						<input ng-model="userCredentials.password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
-						<label class="login-field-icon fui-lock" for="login-pass"></label>
-					</div>
-					<button type="submit" class="btn btn-primary btn-lg btn-block">Join</button>
-				</form>
-			</div>
-			<div class="col-md-8 col-sm-6 hidden-xs home-img">
-				<img src="/img/MootkitHome.jpg">
-			</div>
-		</div>
-	</div>    
-	<div class="container">
-		<div class="row">			
-			<div class="divider"></div>
-		</div>
-		<div class="row home-row">			
-			<div class="col-md-4 col-sm-6 hidden-xs text-right">
-				<img height="120" src="/img/create.png">
-			</div>
-			<div class="col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>1. {{ "Create project" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "The project will be linked to the site on which you plan to work" | translate}}</h6>
-			</div>
-		</div>
-		<div class="row home-row">
-			<div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>2. {{ "Invite colleagues" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "Add users to your project" | translate }}</h6>
-			</div>
-			<div class="col-md-4 col-sm-6 hidden-xs">
-				<img height="120" src="/img/invite.png">
-			</div>
-		</div>
-		<div class="row home-row">			
-			<div class="col-md-4 col-sm-6 hidden-xs text-right">
-				<img height="120" src="/img/specify.png">
-			</div>
-			<div class="col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>3. {{ "Specify the frame" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "Tie the platform with a prototype or a finished site" | translate }}.</h6>
-			</div>
-		</div>		
-		<div class="row home-row">
-			<div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>4. {{ "Moot" | translate }}!</strong></p>
-				<h6 class="lead-thin">{{ "Create tickets and discuss relevant aspects of the project right on the prototype" | translate }}.</h6>
-			</div>
-			<div class="col-md-4 col-sm-6 hidden-xs">
-				<img height="120" src="/img/moot.png">
-			</div>
-		</div>
-		<div class="row home-row">			
-			<div class="col-md-4 col-sm-6 text-right hidden-xs">
-				<img height="120" src="/img/ribbon.png">
-			</div>
-			<div class="col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>5. {{ "Divide and Conquer" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "Sort the tickets by themes. Assign members" | translate }}.</h6>
-			</div>
-		</div>
-		<div class="row home-row">
-			<div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>6. {{ "Analyze" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "Keep all decisions on your project. This allows you to easily manage the technical and design solutions" | translate }}.</h6>
-			</div>
-			<div class="col-md-4 col-sm-6 hidden-xs">
-				<img height="120" src="/img/statistics.png">
-			</div>
-		</div>
-		<div class="row home-row">			
-			<div class="col-md-4 col-sm-6 text-right hidden-xs">
-				<img height="120" src="/img/community.png">
-			</div>
-			<div class="col-md-4 col-sm-6 text-center">
-				<p class="lead"><strong>7. {{ "Work with community" | translate }}</strong></p>
-				<h6 class="lead-thin">{{ "Consider the desire of users. Correct errors found community" | translate }}.</h6>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid footer-bg ">
-		<div class="container">
-			<div class="col-md-8">
-				<div class="pd">				
-					<g:plusone></g:plusone>					
-				<p><small><b>© 2014 MootKit.com All Rights Reserved.</b></small></p>
-				</div>
-			</div>
-			<div class="col-md-4 footer-primary-bg pd-hrz">	
-				<a href="//plus.google.com/u/0/114344950409828007023?prsrc=3"
-				   rel="publisher" target="_top" style="text-decoration:none;">
-				<img src="//ssl.gstatic.com/images/icons/gplus-64.png" alt="Google+" style="border:0;width:64px;height:64px;"/>
-				</a>
-			</div>
-		</div>
-	</div>
+<div class="container-fluid home-top-bg">
+    <div class="container">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <p class="lead">{{ "Fantastically convenient platform for" | translate }} {{ "collaboration over the web projects" | translate }} <strong>{{ "realtime" | translate }}</strong>.</p>
+            <form class="login-form" ng-submit="join()">
+                <div class="form-group">
+                    <input ng-model="userCredentials.email" type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name">
+                    <label class="login-field-icon fui-mail" for="login-name"></label>
+                </div>
+                <div class="form-group">
+                    <input ng-model="userCredentials.password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Join</button>
+            </form>
+        </div>
+        <div class="col-md-8 col-sm-6 hidden-xs home-img">
+            <img src="/img/MootkitHome.jpg">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="divider"></div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-4 col-sm-6 hidden-xs text-right">
+            <img height="120" src="/img/create.png">
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>1. {{ "Create project" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "The project will be linked to the site on which you plan to work" | translate}}</h6>
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>2. {{ "Invite colleagues" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "Add users to your project" | translate }}</h6>
+        </div>
+        <div class="col-md-4 col-sm-6 hidden-xs">
+            <img height="120" src="/img/invite.png">
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-4 col-sm-6 hidden-xs text-right">
+            <img height="120" src="/img/specify.png">
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>3. {{ "Specify the frame" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "Tie the platform with a prototype or a finished site" | translate }}.</h6>
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>4. {{ "Moot" | translate }}!</strong></p>
+            <h6 class="lead-thin">{{ "Create tickets and discuss relevant aspects of the project right on the prototype" | translate }}.</h6>
+        </div>
+        <div class="col-md-4 col-sm-6 hidden-xs">
+            <img height="120" src="/img/moot.png">
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-4 col-sm-6 text-right hidden-xs">
+            <img height="120" src="/img/ribbon.png">
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>5. {{ "Divide and Conquer" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "Sort the tickets by themes. Assign members" | translate }}.</h6>
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-offset-4 col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>6. {{ "Analyze" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "Keep all decisions on your project. This allows you to easily manage the technical and design solutions" | translate }}.</h6>
+        </div>
+        <div class="col-md-4 col-sm-6 hidden-xs">
+            <img height="120" src="/img/statistics.png">
+        </div>
+    </div>
+    <div class="row home-row">
+        <div class="col-md-4 col-sm-6 text-right hidden-xs">
+            <img height="120" src="/img/community.png">
+        </div>
+        <div class="col-md-4 col-sm-6 text-center">
+            <p class="lead"><strong>7. {{ "Work with community" | translate }}</strong></p>
+            <h6 class="lead-thin">{{ "Consider the desire of users. Correct errors found community" | translate }}.</h6>
+        </div>
+    </div>
+</div>
+<div class="container-fluid footer-bg ">
+    <div class="container">
+        <div class="col-md-8">
+            <div class="pd">
+                <g:plusone></g:plusone>
+            <p><small><b>© 2014 MootKit.com All Rights Reserved.</b></small></p>
+            </div>
+        </div>
+        <div class="col-md-4 footer-primary-bg pd-hrz">
+            <a href="//plus.google.com/u/0/114344950409828007023?prsrc=3"
+               rel="publisher" target="_top" style="text-decoration:none;">
+            <img src="//ssl.gstatic.com/images/icons/gplus-64.png" alt="Google+" style="border:0;width:64px;height:64px;"/>
+            </a>
+        </div>
+    </div>
+</div>
